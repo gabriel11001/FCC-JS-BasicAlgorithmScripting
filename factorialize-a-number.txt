@@ -1,0 +1,13 @@
+function factorialize(num) {
+  if (num == 0) {
+    return 1;
+  }
+  let fatorial = num;
+  for (let i=num; i>1; i--) {
+    fatorial *= (i-1);
+    console.log(fatorial);
+  }
+  return fatorial;
+}
+
+factorialize(5);
