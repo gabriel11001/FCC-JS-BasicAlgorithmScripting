@@ -1,0 +1,19 @@
+function chunkArrayInGroups(arr, size) {
+  let temporario = [];
+  let resultado = [];
+
+  for (let a = 0; a < arr.length; a++) {
+    if (a % size !== size - 1) temporario.push(arr[a]);
+    else {
+      temporario.push(arr[a]);
+      resultado.push(temporario);
+      temporario = [];
+    }
+  }
+
+  if (temporario.length !== 0) {
+    resultado.push(temporario); }
+  return resultado;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
